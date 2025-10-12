@@ -1,13 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nehemías Ingaroca - Ingeniero Mecatrónico</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nehemías Ingaroca Fabián | Ingeniería Mecatrónica</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f1c;
+      color: #e0e6f0;
+      display: flex;
+    }
+
+    /* Menú lateral */
+    nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 230px;
+      height: 100vh;
+      background: #0e1424;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 2px solid #1e2a44;
+    }
+
+    nav h2 {
+      color: #00bfff;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #e0e6f0;
+      text-decoration: none;
+      padding: 10px 15px;
+      width: 80%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #00bfff33;
+      color: #00bfff;
+    }
+
+    /* Contenido principal */
+    main {
+      margin-left: 250px;
+      padding: 40px;
+      width: calc(100% - 250px);
+    }
+
+    section {
+      margin-bottom: 80px;
+      scroll-margin-top: 100px;
+    }
+
+    h1, h2 {
+      color: #00bfff;
+    }
+
+    .foto {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #00bfff;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .botones a {
+      display: inline-block;
+      background: #00bfff;
+      color: #0a0f1c;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 8px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .botones a:hover {
+      background: #0090c5;
+    }
+
+    .descripcion {
+      line-height: 1.6;
+      max-width: 750px;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; background-color: #f4f4f9; text-align: center; padding-top: 100px;">
-  <h1>👋 Hola, soy Nehemías Nicolás Ingaroca Fabián</h1>
-  <h2>Ingeniero Mecatrónico</h2>
-  <p>Apasionado por la innovación, las energías renovables y la ingeniería aplicada.</p>
+
+<body>
+  <nav>
+    <h2>Menú</h2>
+    <a href="#about">Acerca de mí</a>
+    <a href="#education">Educación</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <main>
+    <!-- SECCIÓN 1: ACERCA DE MÍ -->
+    <section id="about">
+      <h1>Nehemías Nicolás Ingaroca Fabián</h1>
+      <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Foto de Nehemías" class="foto" />
+      <p class="descripcion">
+        Bachiller en Ingeniería Mecatrónica por la Universidad Nacional de Ingeniería (UNI) — Décimo Superior.  
+        Experiencia en diseño mecánico, instrumentación y desarrollo de ofertas para proyectos EPC (Engineering, Procurement & Construction) en los sectores minero e industrial.  
+        Me caracteriza la integración de disciplinas mecánicas, eléctricas y de instrumentación, orientado siempre a la excelencia y la innovación tecnológica.  
+        <br><br>
+        Mi objetivo es liderar proyectos que implementen tecnologías avanzadas como gemelos digitales y minería autónoma.
+      </p>
+
+      <div class="botones">
+        <a href="https://www.linkedin.com/in/nehemiasingarocafabian" target="_blank">Noticias sobre mí</a>
+        <a href="cv_nehemias.pdf" target="_blank">Ver CV</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
