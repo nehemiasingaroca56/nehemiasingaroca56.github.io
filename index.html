@@ -1,189 +1,187 @@
+<!-- PARTE 1/10 - INDEX.HTML (HEAD + NAV SKELETON) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nehemías Ingaroca Fabián | Ingeniería Mecatrónica</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Nehemías Ingaroca — Ingeniería Mecatrónica</title>
+  <meta name="description" content="Nehemías Ingaroca | Ingeniero Mecatrónico - Portafolio profesional" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
+
+  <!-- Favicon (pon uno en /img/favicon.png si quieres) -->
+  <link rel="icon" href="img/favicon.png" />
+
+  <!-- Variables de color y estilos base -->
   <style>
-    /* ====== ESTILO GENERAL ====== */
-    body {
-      margin: 0;
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #e6f0ff, #f9fcff);
-      color: #1c1c1c;
-      display: flex;
+    :root{
+      --bg-1: #f6fbff;        /* fondo general (claro y tranquilo) */
+      --card: #ffffff;        /* tarjetas */
+      --text: #0f1724;        /* texto principal */
+      --muted: #5b6b7a;       /* texto secundario */
+      --accent: #0f87d1;      /* azul principal (acento) */
+      --accent-2: #38c6b6;    /* turquesa secundario */
+      --glass: rgba(255,255,255,0.7);
+      --shadow: 0 10px 30px rgba(16,24,40,0.08);
+      --radius: 12px;
     }
 
-    h1, h2, h3 {
-      color: #004aad;
+    /* Reset minimal */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg-1) 0%, #eef7fb 100%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      min-height:100vh;
     }
 
-    a {
-      text-decoration: none;
-    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
 
-    /* ====== MENÚ LATERAL ====== */
-    nav {
+    /* LAYOUT: menú lateral fijo + main scrollable */
+    .sidebar {
       position: fixed;
-      left: 0;
-      top: 0;
-      width: 240px;
-      height: 100vh;
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(10px);
-      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.05);
-      padding: 30px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-right: 1px solid rgba(0,0,0,0.1);
+      left: 20px;
+      top: 20px;
+      bottom: 20px;
+      width: 260px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(15,24,36,0.06);
+      backdrop-filter: blur(6px);
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      z-index: 100;
     }
 
-    nav h2 {
-      margin-bottom: 30px;
-      font-size: 1.3em;
-      color: #004aad;
-      text-transform: uppercase;
+    .sidebar .profile {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
     }
 
-    nav a {
-      color: #004aad;
-      font-weight: 500;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin: 6px 0;
-      width: 80%;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: #004aad;
-      color: #ffffff;
-    }
-
-    /* ====== CONTENIDO PRINCIPAL ====== */
-    main {
-      margin-left: 260px;
-      padding: 40px;
-      width: calc(100% - 260px);
-    }
-
-    section {
-      margin-bottom: 100px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .foto {
-      width: 160px;
-      height: 160px;
+    .avatar {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      border: 3px solid #004aad;
-      object-fit: cover;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      overflow:hidden;
+      border: 4px solid var(--accent-2);
+      box-shadow: 0 6px 20px rgba(15,24,36,0.08);
     }
 
-    .descripcion {
-      max-width: 750px;
-      line-height: 1.7;
-      font-size: 1.05em;
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .name { font-weight:700; color:var(--text); font-size:1.05rem; text-align:center }
+    .role { color:var(--muted); font-size:0.9rem; text-align:center }
+
+    .navlist {
+      margin-top:6px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      width:100%;
     }
 
-    .botones a {
-      display: inline-block;
-      background: #004aad;
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin: 8px;
-      transition: 0.3s;
-      font-weight: 500;
+    .navlist a{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:10px;
+      color:var(--text);
+      font-weight:600;
+      background:transparent;
+      transition: all .22s ease;
+      border: 1px solid transparent;
     }
 
-    .botones a:hover {
-      background: #006be6;
+    .navlist a:hover{
+      background: linear-gradient(90deg, rgba(15,135,209,0.09), rgba(56,198,182,0.06));
+      transform: translateX(6px);
+      color: var(--accent);
+      border-color: rgba(15,135,209,0.08);
     }
 
+    /* Botón de CV pequeño en la sidebar */
+    .cv-btn {
+      margin-top:auto;
+      display:flex;
+      gap:8px;
+      justify-content:center;
+    }
+    .cv-btn a{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:white;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:700;
+      box-shadow: 0 8px 20px rgba(15,135,209,0.12);
+    }
+
+    /* Área principal (scroll) */
+    .main {
+      margin-left: 300px; /* deja espacio para la sidebar */
+      padding: 48px;
+      padding-bottom: 120px;
+      width: calc(100% - 340px);
+    }
+
+    /* Secciones (espacio base, más estilos vendrán en siguientes partes) */
+    section { margin-bottom: 80px; padding-top: 20px }
+    section h1, section h2 { color: var(--accent); margin-bottom:12px }
+
+    /* Responsive simple */
+    @media (max-width: 920px){
+      .sidebar{ position:relative; width:100%; height:auto; left:0; top:0; bottom:auto; flex-direction:row; padding:12px; gap:12px}
+      .sidebar .profile{flex-direction:row; align-items:center}
+      .main{ margin-left:0; width:100%; padding:20px}
+    }
   </style>
+
+  <!-- NOTE: seguirán más estilos y scripts en las partes siguientes -->
 </head>
-
 <body>
-  <nav>
-    <h2>Menú</h2>
-    <a href="#about">Acerca de mí</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#achievements">Publicaciones y Logros</a>
-    <a href="#hobbies">Mis Hobbies</a>
-  </nav>
-
-  <main>
-    <!-- ====== SECCIÓN 1: ACERCA DE MÍ ====== -->
-    <section id="about">
-      <h1>Nehemías Nicolás Ingaroca Fabián</h1>
-      <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Foto de Nehemías" class="foto" />
-      <p class="descripcion">
-        Bachiller en Ingeniería Mecatrónica por la Universidad Nacional de Ingeniería (UNI) — Décimo Superior.  
-        Experiencia en diseño mecánico, instrumentación y desarrollo de soluciones EPC para el sector minero e industrial.  
-        Me caracteriza la integración de disciplinas mecánicas, eléctricas y de instrumentación, siempre orientado a la innovación y la excelencia.  
-        <br><br>
-        Mi objetivo es liderar proyectos que implementen tecnologías como gemelos digitales y minería autónoma para optimizar procesos y construir un futuro sostenible.
-      </p>
-
-      <div class="botones">
-        <a href="https://www.linkedin.com/in/nehemiasingarocafabian" target="_blank">LinkedIn</a>
-        <a href="cv_nehemias.pdf" target="_blank">Ver CV</a>
+  <!-- SIDEBAR (PARTE 1: estructura) -->
+  <aside class="sidebar" aria-label="Menú lateral">
+    <div class="profile">
+      <div class="avatar">
+        <!-- Reemplaza con tu foto en /img/nehemias.jpg -->
+        <img src="img/nehemias.jpg" alt="Foto de Nehemías Ingaroca" id="avatar-img" />
       </div>
-    </section>
+      <div>
+        <div class="name">Nehemías Nicolás Ingaroca Fabián</div>
+        <div class="role">Ingeniero Mecatrónico — UNI</div>
+      </div>
+    </div>
 
-    <!-- ====== SECCIÓN 2: HABILIDADES ====== -->
-    <section id="skills">
-      <h2>Habilidades Técnicas</h2>
-      <p><b>Lenguajes y Software:</b> Python, C#, MATLAB, SQL, AutoCAD, Inventor, Revit, Navisworks.</p>
-      <p><b>Gestión de Proyectos:</b> SAP, Primavera P6, MS Project, Power BI.</p>
-      <p><b>Diseño y Simulación:</b> Autodesk Suite, Robot Structural Analysis, SAP2000, Mathcad.</p>
-      <p><b>Idiomas:</b> Español (nativo), Inglés (intermedio).</p>
-    </section>
+    <nav class="navlist" aria-label="Navegación principal">
+      <!-- Links ancla - los completamos/estilizamos en partes siguientes -->
+      <a href="#about"><i class="fa fa-user"></i> Acerca de mí</a>
+      <a href="#skills"><i class="fa fa-brain"></i> Habilidades</a>
+      <a href="#projects"><i class="fa fa-folder-open"></i> Proyectos</a>
+      <a href="#achievements"><i class="fa fa-award"></i> Publicaciones y Logros</a>
+      <a href="#hobbies"><i class="fa fa-chess"></i> Hobbies</a>
+      <a href="#contact"><i class="fa fa-envelope"></i> Contacto</a>
+    </nav>
 
-    <!-- ====== SECCIÓN 3: PROYECTOS ====== -->
-    <section id="projects">
-      <h2>Proyectos</h2>
-      <h3>Investigaciones y Proyectos Oficiales</h3>
-      <ul>
-        <li>Desarrollo de una unidad electrónica de control para un motor de hidrógeno – IMCI UNI.</li>
-        <li>Instalación y puesta en marcha de generadores eléctricos – FIM UNI.</li>
-        <li>Implementación de sistema de sensado para techos verdes – LNH UNI.</li>
-      </ul>
-      <h3>Proyectos Personales y Aplicados</h3>
-      <ul>
-        <li>Diseño de sistemas flotantes mineros con normativa AISC y ASME.</li>
-        <li>Desarrollo de software 3D para cálculo de fuerzas de anclaje (C#).</li>
-        <li>Simulación de sistemas de bombeo en rajo de mina.</li>
-      </ul>
-    </section>
+    <div class="cv-btn">
+      <a href="cv_nehemias.pdf" target="_blank"><i class="fa fa-download"></i>&nbsp; Descargar CV</a>
+    </div>
+  </aside>
 
-    <!-- ====== SECCIÓN 4: PUBLICACIONES Y LOGROS ====== -->
-    <section id="achievements">
-      <h2>Publicaciones y Logros</h2>
-      <ul>
-        <li>Invitado como ponente en la <b>11th International Conference on Water Resource and Environment (WRE 2025)</b>, Shanghái, China.</li>
-        <li>Ganador del <b>Concurso UNITEC</b> con el proyecto TEFIM.</li>
-        <li>Beca Continuidad Pronabec (2020, 2022, 2023).</li>
-      </ul>
-    </section>
-
-    <!-- ====== SECCIÓN 5: HOBBIES ====== -->
-    <section id="hobbies">
-      <h2>Mis Hobbies</h2>
-      <p>Me gusta mantenerme activo en la comunidad académica y social:</p>
-      <ul>
-        <li>Participación en grupos de estudio e investigación.</li>
-        <li>Actuación y teatro universitario.</li>
-        <li>Competencias de ajedrez y resolución de problemas.</li>
-      </ul>
-    </section>
-  </main>
-</body>
-</html>
+  <!-- CONTENEDOR PRINCIPAL (empezamos; lo completamos en la parte 2) -->
+  <main class="main">
+    <!-- PARTE 2 tendrá la sección "Acerca de mí" -->
