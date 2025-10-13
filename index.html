@@ -41,7 +41,7 @@
         Aspiro a liderar proyectos que integren gemelos digitales y soluciones mecatrónicas para un futuro más sostenible.
       </p>
       <div class="links">
-        <a href="noticias.html" class="btn-primary">Noticias sobre mí</a>
+        <a href="noticias.html" class="btn-primary">Articulos</a>
         <a href="cv_nehemias.pdf" class="btn-secondary" target="_blank" rel="noopener">Ver CV</a>
       </div>
     </section>
@@ -131,7 +131,80 @@
 
   </div>
 </section>
-    
+    <!-- Sección 3: Proyectos -->
+<section id="projects">
+  <h2>Proyectos</h2>
+
+  <div class="project-grid">
+
+    <!-- Proyecto: Simulador de lluvia / Techo verde (WRE 2025) -->
+    <article class="project-card">
+      <div class="project-header">
+        <h3 class="project-title">
+          Software de control y gestión de caudales/humedad/válvulas en simulador de lluvia
+        </h3>
+        <span class="project-badge">Laboratorio Nacional de Hidráulica</span>
+      </div>
+
+      <p class="project-meta">
+        Dirección: <strong>Dra. Ada Arancibia S.</strong> — PhD Water & Environmental Resources Management
+      </p>
+      <p class="project-meta">
+        Proyecto: <em>“Evaluación de la respuesta hidrológica del techo verde al hietograma de ingreso, la humedad antecedente del suelo y el factor de forma, para su escalamiento a una ciudad altoandina.”</em>
+      </p>
+
+      <p>
+        Desarrollé un sistema de sensado basado en <strong>ESP32</strong> para controlar la apertura de válvulas y medir
+        <strong>caudales de infiltración</strong> y <strong>escorrentía</strong> en múltiples áreas, además del sensado de <strong>humedades</strong>.
+        Implementé la lógica de control del <strong>VFD</strong>, la <strong>bomba de agua</strong> y el <strong>tablero eléctrico</strong>.
+        El software de supervisión fue creado en <strong>C# (Visual Studio)</strong>.
+        Actualmente vengo desarrollando un módulo de <strong>predicción de fallas</strong> en sensores con <strong>Redes Neuronales (Python)</strong>.
+      </p>
+
+      <div class="tags">
+        <span class="badge">C#</span>
+        <span class="badge">.NET / WinForms</span>
+        <span class="badge">ESP32</span>
+        <span class="badge">Python</span>
+        <span class="badge">Redes Neuronales</span>
+        <span class="badge">VFD</span>
+        <span class="badge">Instrumentación</span>
+      </div>
+
+      <div class="project-media">
+        <!-- Galería (3 fotos) -->
+        <a href="img/projects/wre2025-1.jpg" class="media-thumb" target="_blank" rel="noopener">
+          <img src="img/projects/wre2025-1.jpg" alt="Vista general del simulador de lluvia">
+        </a>
+        <a href="img/projects/wre2025-2.jpg" class="media-thumb" target="_blank" rel="noopener">
+          <img src="img/projects/wre2025-2.jpg" alt="Detalle de válvulas y sensado de caudal">
+        </a>
+        <a href="img/projects/wre2025-3.jpg" class="media-thumb" target="_blank" rel="noopener">
+          <img src="img/projects/wre2025-3.jpg" alt="Tablero eléctrico y control">
+        </a>
+
+        <!-- Video (demo de funcionamiento) -->
+        <video class="media-video" controls preload="metadata" poster="img/projects/wre2025-cover.jpg">
+          <source src="videos/wre2025-demo.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5. Puedes abrirlo directamente:
+          <a href="videos/wre2025-demo.mp4" target="_blank" rel="noopener">ver video</a>.
+        </video>
+      </div>
+
+      <div class="project-links">
+        <a class="btn-primary" href="docs/wre2025-invitacion.pdf" target="_blank" rel="noopener">Carta de invitación (PDF)</a>
+        <a class="btn-secondary" href="https://wreconf.org/" target="_blank" rel="noopener">Conferencia WRE</a>
+      </div>
+
+      <p class="project-note">
+        Resultados presentados para <strong>The 11th International Conference on Water Resource and Environment (WRE 2025)</strong>,
+        <strong>5–8 de diciembre de 2025</strong>, Shanghái, China — presentación oral. En espera de publicación en Scopus.
+      </p>
+    </article>
+
+  </div>
+</section>
+
   </main>
 </body>
 </html>
