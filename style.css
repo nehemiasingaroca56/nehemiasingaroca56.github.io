@@ -150,3 +150,19 @@ p {
   background: var(--primary);
   color: white;
 }
+
+/* Responsive: pantallas pequeñas */
+@media (max-width: 780px) {
+  body { display: block; }
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 24px;
+  }
+}
