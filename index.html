@@ -1,432 +1,52 @@
-<!-- PARTE 1/10 - INDEX.HTML (HEAD + NAV SKELETON) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Nehemías Ingaroca — Ingeniería Mecatrónica</title>
-  <meta name="description" content="Nehemías Ingaroca | Ingeniero Mecatrónico - Portafolio profesional" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous"/>
-
-  <!-- Favicon (pon uno en /img/favicon.png si quieres) -->
-  <link rel="icon" href="img/favicon.png" />
-
-  <!-- Variables de color y estilos base -->
-  <style>
-    :root{
-      --bg-1: #f6fbff;        /* fondo general (claro y tranquilo) */
-      --card: #ffffff;        /* tarjetas */
-      --text: #0f1724;        /* texto principal */
-      --muted: #5b6b7a;       /* texto secundario */
-      --accent: #0f87d1;      /* azul principal (acento) */
-      --accent-2: #38c6b6;    /* turquesa secundario */
-      --glass: rgba(255,255,255,0.7);
-      --shadow: 0 10px 30px rgba(16,24,40,0.08);
-      --radius: 12px;
-    }
-
-    /* Reset minimal */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,var(--bg-1) 0%, #eef7fb 100%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      min-height:100vh;
-    }
-
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    /* LAYOUT: menú lateral fijo + main scrollable */
-    .sidebar {
-      position: fixed;
-      left: 20px;
-      top: 20px;
-      bottom: 20px;
-      width: 260px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.72));
-      border-radius: calc(var(--radius) + 4px);
-      padding: 28px 18px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(15,24,36,0.06);
-      backdrop-filter: blur(6px);
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      z-index: 100;
-    }
-
-    .sidebar .profile {
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:12px;
-    }
-
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      overflow:hidden;
-      border: 4px solid var(--accent-2);
-      box-shadow: 0 6px 20px rgba(15,24,36,0.08);
-    }
-
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-
-    .name { font-weight:700; color:var(--text); font-size:1.05rem; text-align:center }
-    .role { color:var(--muted); font-size:0.9rem; text-align:center }
-
-    .navlist {
-      margin-top:6px;
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      width:100%;
-    }
-
-    .navlist a{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:10px;
-      color:var(--text);
-      font-weight:600;
-      background:transparent;
-      transition: all .22s ease;
-      border: 1px solid transparent;
-    }
-
-    .navlist a:hover{
-      background: linear-gradient(90deg, rgba(15,135,209,0.09), rgba(56,198,182,0.06));
-      transform: translateX(6px);
-      color: var(--accent);
-      border-color: rgba(15,135,209,0.08);
-    }
-
-    /* Botón de CV pequeño en la sidebar */
-    .cv-btn {
-      margin-top:auto;
-      display:flex;
-      gap:8px;
-      justify-content:center;
-    }
-    .cv-btn a{
-      background: linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:white;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:700;
-      box-shadow: 0 8px 20px rgba(15,135,209,0.12);
-    }
-
-    /* Área principal (scroll) */
-    .main {
-      margin-left: 300px; /* deja espacio para la sidebar */
-      padding: 48px;
-      padding-bottom: 120px;
-      width: calc(100% - 340px);
-    }
-
-    /* Secciones (espacio base, más estilos vendrán en siguientes partes) */
-    section { margin-bottom: 80px; padding-top: 20px }
-    section h1, section h2 { color: var(--accent); margin-bottom:12px }
-
-    /* Responsive simple */
-    @media (max-width: 920px){
-      .sidebar{ position:relative; width:100%; height:auto; left:0; top:0; bottom:auto; flex-direction:row; padding:12px; gap:12px}
-      .sidebar .profile{flex-direction:row; align-items:center}
-      .main{ margin-left:0; width:100%; padding:20px}
-    }
-  </style>
-
-  <!-- NOTE: seguirán más estilos y scripts en las partes siguientes -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nehemías Ingaroca | Portafolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- SIDEBAR (PARTE 1: estructura) -->
-  <aside class="sidebar" aria-label="Menú lateral">
+
+  <!-- ===== Sidebar ===== -->
+  <aside class="sidebar">
     <div class="profile">
-      <div class="avatar">
-        <!-- Reemplaza con tu foto en /img/nehemias.jpg -->
-        <img src="img/nehemias.jpg" alt="Foto de Nehemías Ingaroca" id="avatar-img" />
-      </div>
-      <div>
-        <div class="name">Nehemías Nicolás Ingaroca Fabián</div>
-        <div class="role">Ingeniero Mecatrónico — UNI</div>
-      </div>
+      <img src="tu_foto.jpg" alt="Foto de Nehemías Ingaroca" class="profile-img">
+      <h1>Nehemías Nicolás<br>Ingaroca Fabián</h1>
+      <p>Ingeniero Mecatrónico — UNI</p>
     </div>
 
-    <nav class="navlist" aria-label="Navegación principal">
-      <!-- Links ancla - los completamos/estilizamos en partes siguientes -->
-      <a href="#about"><i class="fa fa-user"></i> Acerca de mí</a>
-      <a href="#skills"><i class="fa fa-brain"></i> Habilidades</a>
-      <a href="#projects"><i class="fa fa-folder-open"></i> Proyectos</a>
-      <a href="#achievements"><i class="fa fa-award"></i> Publicaciones y Logros</a>
-      <a href="#hobbies"><i class="fa fa-chess"></i> Hobbies</a>
-      <a href="#contact"><i class="fa fa-envelope"></i> Contacto</a>
+    <nav class="menu">
+      <a href="#acerca" class="active">🏠 Acerca de mí</a>
+      <a href="#habilidades">💡 Habilidades</a>
+      <a href="#proyectos">🧩 Proyectos</a>
+      <a href="#logros">🏅 Publicaciones y Logros</a>
+      <a href="#hobbies">🎭 Hobbies</a>
+      <a href="#contacto">📧 Contacto</a>
     </nav>
 
-    <div class="cv-btn">
-      <a href="cv_nehemias.pdf" target="_blank"><i class="fa fa-download"></i>&nbsp; Descargar CV</a>
-    </div>
+    <a href="tu_cv.pdf" class="btn-cv" download>⬇️ Descargar CV</a>
   </aside>
 
-  <!-- CONTENEDOR PRINCIPAL (empezamos; lo completamos en la parte 2) -->
-  <!-- PARTE 2/10 - SECCIÓN ACERCA DE MÍ -->
-<section id="about">
-  <div style="
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 40px 36px;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-  ">
-    <div style="flex: 1 1 260px; text-align:center;">
-      <img src="img/nehemias_profile2.jpg" alt="Foto Nehemías Ingaroca" style="
-        width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
-        border: 4px solid var(--accent); box-shadow: 0 8px 20px rgba(15,24,36,0.1);
-      ">
-    </div>
-
-    <div style="flex: 2 1 400px;">
-      <h1>Acerca de Mí</h1>
-      <p style="font-size:1rem; line-height:1.7; color:var(--text); margin-bottom:16px;">
-        Soy <strong>Nehemías Nicolás Ingaroca Fabián</strong>, Ingeniero Mecatrónico egresado de la Universidad Nacional de Ingeniería (UNI - Perú). 
-        Me apasiona la <strong>innovación tecnológica</strong> aplicada a la ingeniería, la <strong>automatización</strong> y las <strong>energías renovables</strong>. 
-        Actualmente participo en proyectos bajo el modelo <strong>EPC (Engineering, Procurement and Construction)</strong>, contribuyendo al diseño, instrumentación, y desarrollo de sistemas industriales.
+  <!-- ===== Contenido Principal ===== -->
+  <main class="content">
+    <section id="acerca">
+      <h2>👋 Acerca de Mí</h2>
+      <p>
+        Soy <strong>Nehemías Nicolás Ingaroca Fabián</strong>, Ingeniero Mecatrónico egresado de la
+        Universidad Nacional de Ingeniería (UNI - Perú). Me apasiona la
+        <strong>innovación tecnológica</strong>, la <strong>automatización</strong> y las
+        <strong>energías renovables</strong>. Busco liderar proyectos de gran escala
+        que impulsen el desarrollo sostenible, integrando gemelos digitales y
+        soluciones mecatrónicas avanzadas.
       </p>
-
-      <p style="font-size:1rem; line-height:1.7; color:var(--muted); margin-bottom:24px;">
-        Aspiro a liderar proyectos de gran escala que impulsen el desarrollo sostenible, 
-        integrando gemelos digitales, modelado inteligente y soluciones mecatrónicas avanzadas. 
-        Siempre busco aprender, crear y colaborar para transformar ideas en resultados tangibles.
-      </p>
-
-      <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="noticias.html" class="link-btn" style="
-          background: linear-gradient(90deg,var(--accent),var(--accent-2));
-          color:white; padding:10px 16px; border-radius:10px;
-          font-weight:600; box-shadow: 0 8px 18px rgba(15,135,209,0.12);
-          transition: all .25s ease;
-        "><i class="fa fa-newspaper"></i> Noticias sobre mí</a>
-
-        <a href="cv_nehemias.pdf" target="_blank" class="link-btn" style="
-          background: var(--glass);
-          border: 1px solid rgba(15,135,209,0.15);
-          color: var(--accent);
-          padding:10px 16px; border-radius:10px; font-weight:600;
-          transition: all .25s ease;
-        "><i class="fa fa-file-pdf"></i> Ver CV</a>
+      <div class="links">
+        <a href="#" class="btn">📰 Noticias sobre mí</a>
+        <a href="tu_cv.pdf" class="btn">📄 Ver CV</a>
       </div>
-    </div>
-  </div>
-</section>
-  <!-- PARTE 3/10 - SECCIÓN HABILIDADES -->
-<section id="skills">
-  <h1>Habilidades</h1>
+    </section>
+  </main>
 
-  <div class="skills-grid" style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 20px;
-  ">
-    <!-- Lenguajes de Programación -->
-    <div class="skill-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    ">
-      <h2 style="color: var(--accent); margin-bottom: 10px;">
-        <i class="fa fa-code"></i> Lenguajes de Programación
-      </h2>
-      <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-        <li>Python (Pandas, NumPy)</li>
-        <li>C# (Aplicaciones 3D de cálculo estructural)</li>
-        <li>MATLAB y MathCAD</li>
-        <li>R y SQL</li>
-      </ul>
-    </div>
-
-    <!-- Software de Ingeniería -->
-    <div class="skill-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    ">
-      <h2 style="color: var(--accent); margin-bottom: 10px;">
-        <i class="fa fa-cogs"></i> Software de Ingeniería
-      </h2>
-      <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-        <li>Autodesk: AutoCAD, Navisworks, Inventor, Revit MEP</li>
-        <li>SAP2000, Robot Structural Analysis</li>
-        <li>ETABS, Civil 3D, InfoWorks</li>
-      </ul>
-    </div>
-
-    <!-- Gestión de Proyectos -->
-    <div class="skill-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    ">
-      <h2 style="color: var(--accent); margin-bottom: 10px;">
-        <i class="fa fa-project-diagram"></i> Gestión de Proyectos
-      </h2>
-      <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-        <li>Primavera P6, MS Project, SAP S/4HANA PS</li>
-        <li>WBS Schedule Pro, Power BI</li>
-        <li>Metodología BIM, Gestión EPC</li>
-      </ul>
-    </div>
-
-    <!-- Herramientas Digitales -->
-    <div class="skill-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 24px;
-    ">
-      <h2 style="color: var(--accent); margin-bottom: 10px;">
-        <i class="fa fa-laptop-code"></i> Herramientas Digitales
-      </h2>
-      <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-        <li>Office 365 (Word, Excel, PowerPoint, Teams, OneDrive)</li>
-        <li>Visual Studio Code, GitHub</li>
-        <li>ChatGPT, Notion, Trello</li>
-      </ul>
-    </div>
-  </div>
-</section>
-  <!-- PARTE 4/10 - SECCIÓN PROYECTOS -->
-<section id="projects">
-  <h1>Proyectos</h1>
-
-  <!-- Subtítulo -->
-  <h2 style="color: var(--accent); margin-top: 20px;">Proyectos Oficiales</h2>
-  <div class="project-grid" style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    margin-top: 16px;
-  ">
-    <!-- Proyecto 1 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Banco de Pruebas de Motor de Hidrógeno</h3>
-      <p>
-        Desarrollo de una unidad electrónica avanzada para el control y adquisición de datos
-        en un motor experimental de hidrógeno en el Instituto de Motores de Combustión Interna (IMCI – UNI).
-      </p>
-      <p><strong>Rol:</strong> Investigador principal</p>
-    </div>
-
-    <!-- Proyecto 2 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Sistema de Sensado para Techos Verdes</h3>
-      <p>
-        Implementación de un sistema de sensado y control para el estudio de infiltración y escorrentía
-        en el Laboratorio Nacional de Hidráulica (LNH – UNI).
-      </p>
-      <p><strong>Rol:</strong> Líder de desarrollo mecatrónico</p>
-    </div>
-
-    <!-- Proyecto 3 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Proyecto de Generadores Eléctricos (UNI – FIM)</h3>
-      <p>
-        Coordinación e instalación de generadores eléctricos en zonas de terreno inclinado.
-        Involucró diseño estructural, tableros eléctricos, HMIs y control.
-      </p>
-      <p><strong>Rol:</strong> Líder técnico</p>
-    </div>
-  </div>
-
-  <!-- Subtítulo -->
-  <h2 style="color: var(--accent); margin-top: 40px;">Proyectos Personales</h2>
-  <div class="project-grid" style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-    margin-top: 16px;
-  ">
-    <!-- Proyecto Personal 1 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Software de Cálculo de Tensores 3D</h3>
-      <p>
-        Desarrollo en C# de una herramienta para el cálculo de fuerzas de anclaje en muelles flotantes.
-        Redujo 97% el tiempo de cálculo y mejoró la precisión en ingeniería estructural.
-      </p>
-      <p><strong>Tipo:</strong> Innovación aplicada en Dinamo Ingeniería</p>
-    </div>
-
-    <!-- Proyecto Personal 2 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Modelo de Rajo Minero Digital</h3>
-      <p>
-        Diseño conceptual de un rajo minero con integración 3D, modelado de bombeo, rampas,
-        y simulación de operaciones autónomas usando gemelos digitales.
-      </p>
-      <p><strong>Tipo:</strong> Proyecto personal</p>
-    </div>
-
-    <!-- Proyecto Personal 3 -->
-    <div class="project-card" style="
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-    ">
-      <h3>Sistemas Flotantes para Recuperación de Agua</h3>
-      <p>
-        Diseño y modelado de sistemas flotantes, barandas, grating y estructuras modulares para recuperación de agua de relave.
-      </p>
-      <p><strong>Tipo:</strong> Proyecto aplicado</p>
-    </div>
-  </div>
-</section>
-</main>
 </body>
 </html>
-
