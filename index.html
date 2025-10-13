@@ -5,95 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nehemías Ingaroca Fabián | Ingeniería Mecatrónica</title>
   <style>
+    /* ====== ESTILO GENERAL ====== */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0a0f1c;
-      color: #e0e6f0;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e6f0ff, #f9fcff);
+      color: #1c1c1c;
       display: flex;
     }
 
-    /* Menú lateral */
+    h1, h2, h3 {
+      color: #004aad;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ====== MENÚ LATERAL ====== */
     nav {
       position: fixed;
       left: 0;
       top: 0;
-      width: 230px;
+      width: 240px;
       height: 100vh;
-      background: #0e1424;
-      padding-top: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 2px 0 15px rgba(0, 0, 0, 0.05);
+      padding: 30px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-right: 2px solid #1e2a44;
+      border-right: 1px solid rgba(0,0,0,0.1);
     }
 
     nav h2 {
-      color: #00bfff;
-      margin-bottom: 40px;
-      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.3em;
+      color: #004aad;
+      text-transform: uppercase;
     }
 
     nav a {
-      color: #e0e6f0;
-      text-decoration: none;
-      padding: 10px 15px;
+      color: #004aad;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin: 6px 0;
       width: 80%;
-      border-radius: 10px;
       text-align: center;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #00bfff33;
-      color: #00bfff;
+      background: #004aad;
+      color: #ffffff;
     }
 
-    /* Contenido principal */
+    /* ====== CONTENIDO PRINCIPAL ====== */
     main {
-      margin-left: 250px;
+      margin-left: 260px;
       padding: 40px;
-      width: calc(100% - 250px);
+      width: calc(100% - 260px);
     }
 
     section {
-      margin-bottom: 80px;
-      scroll-margin-top: 100px;
-    }
-
-    h1, h2 {
-      color: #00bfff;
+      margin-bottom: 100px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
     .foto {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      border: 3px solid #00bfff;
+      border: 3px solid #004aad;
       object-fit: cover;
-      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .descripcion {
+      max-width: 750px;
+      line-height: 1.7;
+      font-size: 1.05em;
     }
 
     .botones a {
       display: inline-block;
-      background: #00bfff;
-      color: #0a0f1c;
+      background: #004aad;
+      color: white;
       text-decoration: none;
       padding: 10px 20px;
-      margin: 8px;
       border-radius: 8px;
-      font-weight: bold;
+      margin: 8px;
       transition: 0.3s;
+      font-weight: 500;
     }
 
     .botones a:hover {
-      background: #0090c5;
+      background: #006be6;
     }
 
-    .descripcion {
-      line-height: 1.6;
-      max-width: 750px;
-    }
   </style>
 </head>
 
@@ -101,30 +113,76 @@
   <nav>
     <h2>Menú</h2>
     <a href="#about">Acerca de mí</a>
-    <a href="#education">Educación</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#projects">Proyectos</a>
     <a href="#skills">Habilidades</a>
-    <a href="#contact">Contacto</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#achievements">Publicaciones y Logros</a>
+    <a href="#hobbies">Mis Hobbies</a>
   </nav>
 
   <main>
-    <!-- SECCIÓN 1: ACERCA DE MÍ -->
+    <!-- ====== SECCIÓN 1: ACERCA DE MÍ ====== -->
     <section id="about">
       <h1>Nehemías Nicolás Ingaroca Fabián</h1>
       <img src="https://avatars.githubusercontent.com/u/00000000?v=4" alt="Foto de Nehemías" class="foto" />
       <p class="descripcion">
         Bachiller en Ingeniería Mecatrónica por la Universidad Nacional de Ingeniería (UNI) — Décimo Superior.  
-        Experiencia en diseño mecánico, instrumentación y desarrollo de ofertas para proyectos EPC (Engineering, Procurement & Construction) en los sectores minero e industrial.  
-        Me caracteriza la integración de disciplinas mecánicas, eléctricas y de instrumentación, orientado siempre a la excelencia y la innovación tecnológica.  
+        Experiencia en diseño mecánico, instrumentación y desarrollo de soluciones EPC para el sector minero e industrial.  
+        Me caracteriza la integración de disciplinas mecánicas, eléctricas y de instrumentación, siempre orientado a la innovación y la excelencia.  
         <br><br>
-        Mi objetivo es liderar proyectos que implementen tecnologías avanzadas como gemelos digitales y minería autónoma.
+        Mi objetivo es liderar proyectos que implementen tecnologías como gemelos digitales y minería autónoma para optimizar procesos y construir un futuro sostenible.
       </p>
 
       <div class="botones">
-        <a href="https://www.linkedin.com/in/nehemiasingarocafabian" target="_blank">Noticias sobre mí</a>
+        <a href="https://www.linkedin.com/in/nehemiasingarocafabian" target="_blank">LinkedIn</a>
         <a href="cv_nehemias.pdf" target="_blank">Ver CV</a>
       </div>
+    </section>
+
+    <!-- ====== SECCIÓN 2: HABILIDADES ====== -->
+    <section id="skills">
+      <h2>Habilidades Técnicas</h2>
+      <p><b>Lenguajes y Software:</b> Python, C#, MATLAB, SQL, AutoCAD, Inventor, Revit, Navisworks.</p>
+      <p><b>Gestión de Proyectos:</b> SAP, Primavera P6, MS Project, Power BI.</p>
+      <p><b>Diseño y Simulación:</b> Autodesk Suite, Robot Structural Analysis, SAP2000, Mathcad.</p>
+      <p><b>Idiomas:</b> Español (nativo), Inglés (intermedio).</p>
+    </section>
+
+    <!-- ====== SECCIÓN 3: PROYECTOS ====== -->
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <h3>Investigaciones y Proyectos Oficiales</h3>
+      <ul>
+        <li>Desarrollo de una unidad electrónica de control para un motor de hidrógeno – IMCI UNI.</li>
+        <li>Instalación y puesta en marcha de generadores eléctricos – FIM UNI.</li>
+        <li>Implementación de sistema de sensado para techos verdes – LNH UNI.</li>
+      </ul>
+      <h3>Proyectos Personales y Aplicados</h3>
+      <ul>
+        <li>Diseño de sistemas flotantes mineros con normativa AISC y ASME.</li>
+        <li>Desarrollo de software 3D para cálculo de fuerzas de anclaje (C#).</li>
+        <li>Simulación de sistemas de bombeo en rajo de mina.</li>
+      </ul>
+    </section>
+
+    <!-- ====== SECCIÓN 4: PUBLICACIONES Y LOGROS ====== -->
+    <section id="achievements">
+      <h2>Publicaciones y Logros</h2>
+      <ul>
+        <li>Invitado como ponente en la <b>11th International Conference on Water Resource and Environment (WRE 2025)</b>, Shanghái, China.</li>
+        <li>Ganador del <b>Concurso UNITEC</b> con el proyecto TEFIM.</li>
+        <li>Beca Continuidad Pronabec (2020, 2022, 2023).</li>
+      </ul>
+    </section>
+
+    <!-- ====== SECCIÓN 5: HOBBIES ====== -->
+    <section id="hobbies">
+      <h2>Mis Hobbies</h2>
+      <p>Me gusta mantenerme activo en la comunidad académica y social:</p>
+      <ul>
+        <li>Participación en grupos de estudio e investigación.</li>
+        <li>Actuación y teatro universitario.</li>
+        <li>Competencias de ajedrez y resolución de problemas.</li>
+      </ul>
     </section>
   </main>
 </body>
