@@ -364,6 +364,64 @@ p {
 @media (max-width: 540px) {
   .project-media { grid-template-columns: 1fr; }
 }
+/* ===== EXPERIENCIA PROFESIONAL ===== */
+#experience {
+  padding: 50px 0;
+  background-color: #fafafa;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.exp-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+}
+
+.exp-title {
+  font-size: 1.4rem;
+  color: #0078d7;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.exp-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.exp-gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.exp-description {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #444;
+}
 /* ===== PROYECTOS: Próximamente ===== */
 .coming-soon .project-badge {
   border-color: rgba(255, 184, 0, 0.4);
