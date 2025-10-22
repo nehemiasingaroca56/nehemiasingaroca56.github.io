@@ -395,27 +395,30 @@ p {
   text-align: center;
 }
 
+/* Galería de experiencia profesional */
 .exp-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
+  flex-wrap: wrap;
+  margin: 10px 0;
 }
 
 .exp-gallery img {
-  width: 100%;
-  height: 110px; /* antes era 180px, reducido en un 60% */
-  object-fit: cover;
+  width: 30%;              /* ahora solo ocupan un 30% del ancho cada una */
+  max-width: 320px;        /* nunca serán más grandes que 320px */
+  height: 180px;           /* tamaño controlado y proporcional */
+  object-fit: cover;       /* recorta para que se vea bien centrada */
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .exp-gallery img:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
-
 .exp-description {
   text-align: justify;
   line-height: 1.6;
